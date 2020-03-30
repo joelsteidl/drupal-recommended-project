@@ -1,0 +1,48 @@
+{
+    "name": "pr0ject-x/drupal-recommended-project",
+    "description": "Project-X Drupal 8 Project",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "config": {
+        "sort-packages": true
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.2",
+        "hirak/prestissimo": "^0.3.10",
+        "cweagans/composer-patches": "1.x-dev",
+        "drupal/core-recommended": "^8.8",
+        "drupal/core-composer-scaffold": "^8.8"
+    },
+    "require-dev": {
+        "pr0ject-x/px": "^1.0",
+        "pr0ject-x/px-drupal": "^1.0"
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            }
+        },
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
+        }
+    }
+}
