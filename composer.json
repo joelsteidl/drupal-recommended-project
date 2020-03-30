@@ -25,6 +25,7 @@
         "drupal/core-composer-scaffold": "^8.8"
     },
     "require-dev": {
+        "drush/drush": "^10.2",
         "pr0ject-x/px": "^1.0",
         "pr0ject-x/px-drupal": "^1.0"
     },
