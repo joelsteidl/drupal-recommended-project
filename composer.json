@@ -1,12 +1,15 @@
 {
     "name": "pr0ject-x/drupal-recommended-project",
-    "description": "Project-X Drupal 8 Project",
+    "description": "Project-X Drupal 9 Project",
     "type": "project",
     "license": "GPL-2.0-or-later",
     "prefer-stable": true,
     "minimum-stability": "dev",
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "platform": {
+            "php": "7.3"
+        }
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -18,14 +21,15 @@
         }
     ],
     "require": {
+        "php": ">=7.3",
         "composer/installers": "^1.2",
         "hirak/prestissimo": "^0.3.10",
         "cweagans/composer-patches": "1.x-dev",
-        "drupal/core-recommended": "^8.8",
-        "drupal/core-composer-scaffold": "^8.8"
+        "drupal/core-recommended": "^9.0",
+        "drupal/core-composer-scaffold": "^9.0"
     },
     "require-dev": {
-        "drush/drush": "^10.2",
+        "drush/drush": "^10.3",
         "pr0ject-x/px": "^1.0",
         "pr0ject-x/px-drupal": "^1.0"
     },
