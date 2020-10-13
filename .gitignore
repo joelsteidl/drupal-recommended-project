@@ -6,6 +6,7 @@
 
 # Vagrant
 .vagrant/
+vagrantfile.local
 
 # Drush
 drush/site-aliases/local.*
